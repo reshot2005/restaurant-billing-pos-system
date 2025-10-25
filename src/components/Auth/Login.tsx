@@ -50,7 +50,7 @@ export function Login() {
             <p className="text-sm">
               <strong>Demo credentials:</strong><br />
               Username: <code className="px-1 py-0.5 bg-white rounded">admin</code><br />
-              Password: <code className="px-1 py-0.5 bg-white rounded">admin123</code>
+              Password: <code className="px-1 py-0.5 bg-white rounded">password123</code>
             </p>
           </div>
         </CardHeader>
