@@ -90,6 +90,25 @@ export default function App() {
                   Chat with our support team in real-time
                 </p>
               </div>
+              <div className="flex h-screen overflow-hidden">
+              {/* Sidebar */}
+              <aside className="w-64 bg-white border-r fixed h-screen z-20">
+               {/* your sidebar component */}
+               </aside>
+
+                {/* Main Content Area */}
+              <div className="flex-1 flex flex-col ml-64">
+                 {/* Top Bar */}
+              <header className="h-16 bg-white border-b fixed w-[calc(100%-16rem)] z-10">
+                 {/* your top bar component */}
+              </header>
+
+                  {/* Scrollable Page Content */}
+              <main className="flex-1 overflow-y-auto overflow-x-hidden mt-16 bg-muted/10 p-6">
+                   {/* your page content goes here (Dashboard, POS, etc.) */}
+              </main>
+              </div>
+              </div>
               <div className="p-6 rounded-xl border border-border hover:shadow-lg transition-shadow cursor-pointer">
                 <h3>📧 Email Support</h3>
                 <p className="text-muted-foreground mt-2">
@@ -154,7 +173,8 @@ function AppContent({ activeView, setActiveView, isLoaded, handleQuickAction, re
           onNavigate={setActiveView}
         />
         
-        <main className="ml-64 mt-16 p-6 relative z-10">
+        <main className="ml-64 mt-16 p-6 relative z-10 h-[calc(100vh-4rem)] overflow-y-auto overflow-x-hidden custom-scroll">
+          
           <AnimatePresence mode="wait">
             <motion.div
               key={activeView}
